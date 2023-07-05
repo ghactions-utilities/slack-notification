@@ -1,0 +1,21 @@
+name: Send Slack message
+description: Send slack message by Actions
+
+inputs:
+  webhook-url:
+    description: Slack webhook url
+    required: true
+  job-status:
+    description: Workflow job status
+    required: true
+  message:
+    description: Slack message
+    required: false
+
+runs:
+  using: node16
+  main: dist/index.js
+
+branding:
+  icon: bell
+  color: yellow
