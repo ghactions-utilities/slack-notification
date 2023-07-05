@@ -1,4 +1,4 @@
-name: Send Slack message
+name: Job notification by Slack
 description: Send slack message by Actions
 
 inputs:
