@@ -1,0 +1,15 @@
+name: Slack Notification
+
+on: push
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Send slack notification
+        uses: ./
+        with:
+          webhook-url: ${{ secrets.WEBHOOK_URL }}
+          job-status: ${{ job.status }}
+          message: Hello world!
